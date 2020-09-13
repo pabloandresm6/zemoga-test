@@ -1,0 +1,179 @@
+.pope {
+    min-height: 740px;
+    position: relative;
+    width: 100%; /* 1280px / 1280px = 100% */
+    background: url(../../images/pope_image.png) no-repeat center 0;
+    background-position: center top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .rectangle-8-holder {
+    padding: 37px 0 80px;
+    position: relative;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9InJlY3RhbmdsZS04IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjEwMCUiIHgyPSI1MCUiIHkyPSIwJSI+CjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzMzMzMzMyIgc3RvcC1vcGFjaXR5PSIwIiAvPgo8c3RvcCBvZmZzZXQ9IjQ5LjI0MzE2NCUiIHN0b3AtY29sb3I9IiMzMzMzMzMiIHN0b3Atb3BhY2l0eT0iMC41MyIgLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMzMzMzMzIiBzdG9wLW9wYWNpdHk9IjAuODIiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjcmVjdGFuZ2xlLTgpIiAvPjwvc3ZnPg==);
+    background: -moz-linear-gradient(90deg, rgba(51, 51, 51, 0.0) 0, rgba(51, 51, 51, 0.53) 49.243164%, rgba(51, 51, 51, 0.82) 100%);
+    background: -o-linear-gradient(90deg, rgba(51, 51, 51, 0.0) 0, rgba(51, 51, 51, 0.53) 49.243164%, rgba(51, 51, 51, 0.82) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(51, 51, 51, 0.0) 0, rgba(51, 51, 51, 0.53) 49.243164%, rgba(51, 51, 51, 0.82) 100%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(51, 51, 51, 0.0)), color-stop(49.243164%, rgba(51, 51, 51, 0.53)), to(rgba(51, 51, 51, 0.82)));
+    background: -webkit-linear-gradient(bottom, rgba(51, 51, 51, 0.0) 0, rgba(51, 51, 51, 0.53) 49.243164%, rgba(51, 51, 51, 0.82) 100%);
+    background: -moz-linear-gradient(bottom, rgba(51, 51, 51, 0.0) 0, rgba(51, 51, 51, 0.53) 49.243164%, rgba(51, 51, 51, 0.82) 100%);
+    background: -o-linear-gradient(bottom, rgba(51, 51, 51, 0.0) 0, rgba(51, 51, 51, 0.53) 49.243164%, rgba(51, 51, 51, 0.82) 100%);
+    background: linear-gradient(0deg, rgba(51, 51, 51, 0.0) 0, rgba(51, 51, 51, 0.53) 49.243164%, rgba(51, 51, 51, 0.82) 100%);
+  }
+  .header {
+    margin: 0 auto;
+    padding: 0 126px 0 132px;
+    position: relative;
+    width: 1280px;
+  }
+  .text {
+    float: left;
+    font-size: 2rem; /* 32px / 16px = 2rem */
+  }
+  .composite-path {
+    float: right;
+    margin: 4px 0 0;
+  }
+  .how-it-works {
+    float: right;
+    margin: 9px 52px 0 0;
+    font-weight: 300;
+  }
+  .past-trials {
+    float: right;
+    margin: 9px 48px 0 0;
+    font-weight: 300;
+  }
+  .text-2 {
+    float: right;
+    margin: 9px 53px 0 0;
+    font-weight: 300;
+  }
+  .l-constrained-2 {
+    margin: 20px auto 0;
+    padding: 0 133px;
+    position: relative;
+    width: 1280px;
+  }
+  .group-3 {
+    position: relative;
+    width: 499px;
+    background: url(../../images/pope_blur.jpg) no-repeat;
+  }
+  
+  .col {
+    min-height: 370px;
+    padding: 37px 28px 32px;
+    position: relative;
+    z-index: 0;
+    background: rgba(51, 51, 51, 0.45);
+  }
+  .text-3 {
+    margin: 0 0 0 4px;
+    position: relative;
+    z-index: 132;
+    opacity: 0.74;
+    font-weight: 300;
+  }
+  .text-4 {
+    margin: -3px 0 0;
+    position: relative;
+    z-index: 131;
+    font-size: 3.75rem; /* 60px / 16px = 3.75rem */
+  }
+  .text-5 {
+    margin: 24px 0 0 4px;
+    position: relative;
+    width: 398px;
+    z-index: 133;
+    font-size: 1.3125rem; /* 21px / 16px = 1.3125rem */
+    font-weight: 300;
+    line-height: 24px;
+  }
+  .more-info {
+    margin: 22px 4px 0;
+    position: relative;
+    z-index: 135;
+  }
+  .wiki {
+    float: left;
+    margin: 3px 4px 0 0;
+  }
+  .text-6 {
+    font-size: 0.875rem; /* 14px / 16px = 0.875rem */
+    font-weight: 300;
+    text-decoration: underline;
+  }
+  .text-7 {
+    margin: 39px 0 0 4px;
+    position: relative;
+    z-index: 138;
+    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
+    font-weight: bold;
+  }
+  .wrapper-10 {
+    height: 80px;
+    position: relative;
+    width: 499px;
+  }
+  .rectangle-1 {
+    height: 80px;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    width: 250px;
+    background: rgba(28, 187, 180, 0.9);
+    margin-left: -249.5px;
+  }
+  .rectangle-1-copy {
+    height: 80px;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    width: 249px;
+    background: rgba(255, 173, 29, 0.9);
+    margin-left: 0.5px;
+  }
+  .thumbs-2 {
+    left: 50%;
+    position: absolute;
+    top: 20px;
+    width: 286px;
+    margin-left: -142.5px;
+  }
+  .rectangle-9-copy {
+    float: left;
+  }
+  .rectangle-9-copy-2 {
+    float: right;
+  }
+  .closing {
+    margin: 70px 0 0;
+    position: relative;
+    background: rgba(112, 112, 112, 0.3);
+  }
+  .l-constrained-3 {
+    margin: 0 auto;
+    padding: 0 0 0 320px;
+    position: relative;
+    width: 1280px;
+  }
+  .text-8 {
+    float: left;
+    margin: 19px 0 0;
+    width: 82px;
+    font-size: 0.8125rem; /* 13px / 16px = 0.8125rem */
+  }
+  .polygon-2-holder {
+    float: right;
+    min-height: 50px;
+    padding: 5px 14px;
+    width: 876px;
+    background: url(../../images/polygon_2.png) no-repeat;
+    color: #464646;
+    font-size: 2.273451rem; /* 36.38px / 16px = 2.27375rem */
+    font-weight: 300;
+  }
