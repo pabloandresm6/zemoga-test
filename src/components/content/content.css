@@ -5,6 +5,7 @@
   }
   .text-13 {
     color: #333333;
+    margin-left: 8px;
     font-size: 2.5rem; /* 40px / 16px = 2.5rem */
     font-weight: 300;
   }
@@ -15,9 +16,10 @@
   }
   .group-4 {
     float: left;
+    margin:10px;
     position: relative;
     width: 492px;
-    background: url(../../images/layer_13.png) no-repeat;
+    /* /background: url(../../images/layer_13.png) no-repeat; */
   }
   .col-7 {
     min-height: 550px;
@@ -33,6 +35,7 @@
     background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.61) 0, rgba(0, 0, 0, 0.61) 36.743164%, rgba(0, 0, 0, 0.0) 73.97461%, rgba(0, 0, 0, 0.0) 100%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.61) 0, rgba(0, 0, 0, 0.61) 36.743164%, rgba(0, 0, 0, 0.0) 73.97461%, rgba(0, 0, 0, 0.0) 100%);
   }
+
   .row-14 {
     position: relative;
   }
@@ -50,9 +53,12 @@
   }
   .text-14 {
     float: left;
-    width: 241px;
+    width: 425px;
     font-size: 2.8125rem; /* 45px / 16px = 2.8125rem */
   }
+  .text-14.p-t-md {
+    margin-top: -50px !important;
+ }
   .kanye-west-copy-2 {
     margin: 8px auto 0;
     position: relative;
@@ -70,7 +76,20 @@
   .path-copy-8-holder {
     float: left;
     min-height: 40px;
-    width: 156px;
+    width: 195px;
+    border: 1px solid #ffffff; /*stroke*/
+    background: rgba(0, 0, 0, 0.15);
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; /*Will not allow bg color to leak outside borders*/
+    font-size: 0.875rem; /* 14px / 16px = 0.875rem */
+    line-height: 40px;
+    text-align: center;
+  }
+  .path-copy-8-holder-a {
+    float: left;
+    min-height: 40px;
+    width: 300px;
     border: 1px solid #ffffff; /*stroke*/
     background: rgba(0, 0, 0, 0.15);
     -moz-background-clip: padding;
@@ -82,15 +101,17 @@
   }
   .text-16 {
     float: left;
-    margin: 5px 10px 0;
+    margin: 5px 40px 0;
     width: 192px;
     font-size: 0.750409rem; /* 12.01px / 16px = 0.750625rem */
     line-height: 14.40785px;
-    text-align: right;
+    text-align: left;
   }
   .row-8 {
-    margin: 32px 0 0;
-    position: relative;
+    /* margin: 32px 0 0;
+    position: relative; */
+    position: absolute;
+    bottom: 0;
   }
   .rectangle-2-copy-holder {
     float: left;
@@ -158,6 +179,45 @@
     width: 31px;
     background: #ffad1d;
   }
+
+  .pointer {
+    cursor:pointer;
+  }
+  .pointer-disabled {
+    border: 1px solid grey;
+    color: grey;
+    cursor:none !important;
+    pointer-events:none !important; 
+  }
+
+  .rectangle-2-copy-7-holder-v-blue {
+    float: left;
+    margin: 7px 9px 0 0;
+    padding: 6px 0 7px;
+    position: relative;
+    width: 31px;
+    background: #1cbbb4;
+  }
+
+  .disabled { 
+    display: none !important;
+  }
+
+  .rectangle-2-copy-7-holder-v-blue.selected {
+    border: 3px solid #ffffff;
+  }
+  .rectangle-2-copy-7-holder-v-orange {
+    float: left;
+    margin: 7px 9px 0 0;
+    padding: 6px 0 7px;
+    position: relative;
+    width: 31px;
+    background: #ffad1d;
+  }
+  .rectangle-2-copy-7-holder-v-orange.selected {
+    border: 3px solid #ffffff;
+  }
+
   .rectangle-9-copy-5 {
     display: block;
     margin: 0 auto;

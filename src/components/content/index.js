@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useState} from 'react';
+import useStoreon from 'storeon/react';
 import malala from '../../images/malala_yousafzai.png';
 import likeIcon2 from '../../images/like_icon_2.png';
 import likeIcon3 from '../../images/like_icon_3.png';
@@ -8,44 +9,62 @@ import unlikeIcon4 from '../../images/unlike_icon_4.png';
 import unlikeIcon5 from '../../images/unlike_icon_5.png';
 import './content.css';
 
-function content() {
+const Content = () => {
+  const { dispatch, peoples } = useStoreon('peoples');
+
   return (
 
     <div className="previous-rulings group">
     <p className="text-13">Votes</p>
     <div className="row-9 match-height group">
-    <div className="group-4">
+    {peoples && peoples.map((person) => (
+    <div key={person.id} className="group-4" style={{ backgroundImage:`url(` + process.env.PUBLIC_URL + `${person.imageUrl})` }}>
+
         <div className="col-7">
         <div className="row-14 group">
             <div className="rectangle-2-copy-8-holder">
             <img className="rectangle-9-copy-17" src={likeIcon2} alt="" width="18" height="18"/>
             </div>
-            <p className="text-14">Kanye West</p>
+            <p className={ person.name.length < 20 ? 'text-14' : 'text-14 p-t-md' }>{person.name}</p>
         </div>
         <div className="row-14 group">
-          <p className="text-16"><strong className="fw700">1 month ago</strong> in Entertainment</p>
+          <p className="text-16"><strong className="fw700">{person.ago} ago</strong> in {person.section}</p>
         </div>
-        <p className="kanye-west-copy-2">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
+        <p className="kanye-west-copy-2">{person.description}</p>
         
-        <div className="row-18 group">
-            <div className="path-copy-8-holder">
-            View Full Report
-            </div>
-            
+        <div className={person.voted == false ? 'row-18 group' : 'disabled'} >
+
+        <div className={person.vote_indicator && person.vote_indicator.upvote  === true ? 'rectangle-2-copy-7-holder-v-blue pointer selected' : 'rectangle-2-copy-7-holder-v-blue pointer' } onClick={() => dispatch('peoples/votes', {id: person.id, upvote: true, downvote: false})}>
+        <img className="rectangle-9-copy-17" src={likeIcon2} alt="" width="18" height="18"/>
         </div>
+        <div className={ person.vote_indicator && person.vote_indicator.downvote === true ? 'rectangle-2-copy-7-holder-v-orange pointer selected' : 'rectangle-2-copy-7-holder-v-orange pointer' } onClick={() => dispatch('peoples/votes', {id: person.id, upvote: false, downvote: true})}>
+            <img className="rectangle-9-copy-5" src={unlikeIcon5} alt="" width="18" height="18"/>
+        </div>
+        <div className={!person.vote_indicator || (person.vote_indicator.upvote == false && person.vote_indicator.downvote == false) ? 'path-copy-8-holder pointer-disabled' : 'path-copy-8-holder pointer' } onClick={() => dispatch('peoples/voted',{id:person.id, voted:true})}>
+            Vote Now
+        </div>            
+        </div>
+
+        <div className={person.voted == true ? 'row-18 group' : 'disabled'} >
+            <div className="path-copy-8-holder-a pointer" onClick={() => dispatch('peoples/voted', {id:person.id,voted:false})}>
+            Thanks for Voting!! - Click here to vote Again
+            </div>
+        </div>
+
         <div className="row-8 match-height group">
             <div className="rectangle-2-copy-holder group">
             <img className="rectangle-9-copy-3" src={likeIcon3} alt="" width="28" height="28"/>
-            <p className="view-full-report-copy">64<span className="text-style">%</span></p>
+            <p className="view-full-report-copy">{person.upVotes}<span className="text-style">%</span></p>
             </div>
             <div className="rectangle-2-copy-2-holder group">
             <img className="rectangle-9-copy-4" src={unlikeIcon4} alt="" width="28" height="28"/>
-            <p className="view-full-report-copy-2">36<span className="text-style">%</span></p>
+            <p className="view-full-report-copy-2">{person.downVotes}<span className="text-style">%</span></p>
             </div>
         </div>
         </div>
     </div>
-    <div className="group-5">
+    ))}
+    {/* <div className="group-5">
         <div className="col-6">
         <div className="row-17 group">
             <div className="rectangle-2-copy-7-holder">
@@ -73,10 +92,10 @@ function content() {
             </div>
         </div>
         </div>
-    </div>
+    </div> */}
     </div>
     <div className="row-10 match-height group">
-    <div className="group-6">
+    {/* <div className="group-6">
         <div className="col-5">
         <div className="row-16 group">
             <div className="rectangle-2-copy-7-holder-2">
@@ -104,8 +123,8 @@ function content() {
             </div>
         </div>
         </div>
-    </div>
-    <div className="group-7">
+    </div> */}
+    {/* <div className="group-7">
         <div className="pics">
         <img className="layer-14" src={malala} alt="" width="492" height="550"/>
         </div>
@@ -136,7 +155,7 @@ function content() {
             </div>
         </div>
         </div>
-    </div>
+    </div> */}
     </div>
     <div className="add-a-name">
     <div className="row group">
@@ -151,4 +170,4 @@ function content() {
   );
 }
 
-export default content;
+export default Content;
